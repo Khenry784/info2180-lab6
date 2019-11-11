@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+body{
+    background-color: gray;
+}
+
+
+.button {
+    color: black;
+    background-color: #484e53;
+    border-color: #484e53;
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
