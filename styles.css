@@ -1,20 +1,42 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
 
 body{
-    background-color: gray;
+    background-color: whitesmoke;
 }
 
-
-.button {
-    color: black;
-    background-color: #484e53;
-    border-color: #484e53;
-    display: inline-block;
-    padding: 6px 12px;
+h1{
+    padding: 3%;
+    background: rgb(4, 135, 223);
     text-align: center;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    cursor: pointer;
+    width: fit-content;
+    color: white;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+form.example button {
+    width: 10%;
+    padding: 10px;
+    background: red;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 60%;
+    background: #f1f1f1;
+  }
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
