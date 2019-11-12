@@ -1,30 +1,29 @@
-// Plain JavaScript AJAX
 window.onload = function() {
 
-  var loadTextBtn = document.querySelector('#loadTextBtn');
+  var nameSubmitBtn = document.querySelector('#nameSubmitBtn');
   var httpRequest;
 
-  loadTextBtn.addEventListener('click', function(element) {
+  nameSubmitBtn.addEventListener('click', function(element) {
     element.preventDefault();
 
     httpRequest = new XMLHttpRequest();
-
+    var search = document.querySelector('#search').value;
+    
     // GET Request
     var url = "superheroes.php";
-    httpRequest.onreadystatechange = loadSuperheroes;
-    httpRequest.open('GET', url);
-    httpRequest.send();
+    httpRequest.onreadystatechange = processSearch;
+    httpRequest.open('POST', url);
+    //setting the Content-Type
+    httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    httpRequest.send('search=' + encodeURIComponent(search) );
   });
 
- 
-  function loadSuperheroes() {
+  function processSearch() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         var response = httpRequest.responseText;
-        var superheroList = document.querySelector('#List');
-        superheroList.innerHTML = response;
-        alert(superheroList.innerHTML)
-
+        var result = document.querySelector('#result');
+        result.innerHTML = response;
       } else {
         alert('There was a problem with the request.');
       }
