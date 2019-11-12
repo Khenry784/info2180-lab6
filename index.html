@@ -4,14 +4,24 @@
     <meta charset="utf-8">
     <title>AJAX Superheroes</title>
     <link rel="stylesheet" href="styles.css" media="screen" />
-    <script src="app.js" id="List" ></script>
+    <script src="app.js" ></script>
   </head>
   <body>
     <div class="container">
       <h1> Avengers Character Search</h1>
-      <button type="button" id="loadTextBtn" class="button">Search</button>
-      
+      <p>Search by Full Name or Alias</p>
+      <form class="example" action="" method="POST">
+            <input type="text" placeholder="e.g Captain America or Steve Rogers" name="search" id="search">
+            <button type="submit" id="nameSubmitBtn" class="btn"> Search</button>
+          </form>
     </div>
+                    
+    <h2>Result</h2>
+      <div id="result"></div>
+    </div>
+
     
+      
+        
   </body>
 </html>
