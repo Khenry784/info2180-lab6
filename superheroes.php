@@ -75,9 +75,10 @@ if (!isset($search)  or empty($search)) {
             echo '<h3>'.$search.'</h3>'."<h4><br> A.K.A ".$superhero['name'].'</h4>'."<br>".'<p>'.$superhero['biography'].'</p>';
         }elseif($search===$superhero['name']){
             echo '<h3>'.$search.'</h3>'."<h4><br> A.K.A ". $superhero['alias'].'</h4>'."<br>".'<p>'.$superhero['biography'].'</p>';
-        }else {
-            echo "Superhero Not Found";
         }
+        /*else {
+            echo "Superhero Not Found";
+        }*/ 
     }
 }
 
